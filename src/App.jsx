@@ -1,5 +1,5 @@
 import Header from "@/layout/header/index";
-import Card from "@/components/card/index";
+import Appointment from "@/features/appointment/index";
 import '@/App.scss';
 
 function App() {
@@ -9,11 +9,7 @@ function App() {
       <div className="page-content">
         <Header />
         <main className="page-main">
-          <section>
-            <Card>
-              test card content
-            </Card>
-          </section>
+          <Appointment />
         </main>
       </div>
     </>
