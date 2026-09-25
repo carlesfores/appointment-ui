@@ -1,9 +1,13 @@
-import './App.css'
+import Header from "@/layout/header/index";
+import '@/App.scss';
 
 function App() {
 
   return (
     <>
+      <div class="page-content">
+        <Header />
+      </div>
     </>
   )
 }

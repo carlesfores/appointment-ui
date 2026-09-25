@@ -1,0 +1,16 @@
+.top-header {
+  padding: 0 16px;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    height: 74px;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+  }
+}

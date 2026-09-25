@@ -43,7 +43,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* custom styles */
-
 :root {
+  --bg-color: #F6F8FA;
+  --box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
   font-size: 16px;
+  background-color: var(--bg-color);
+}
+
+html, body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
 }
