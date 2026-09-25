@@ -3,3 +3,13 @@
   flex-direction: column;
   height: 100%;
 }
+
+.page-main {
+    padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .page-main {
+    padding: 48px;
+  }
+}
