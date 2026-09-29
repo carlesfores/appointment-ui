@@ -13,7 +13,11 @@ function Appointment() {
       ...appointments,
       data
     ]);
-  }
+  };
+
+  const resetList = () => {
+    setAppointments([]);
+  };
 
   return (
     <div className="appointment">
@@ -21,6 +25,11 @@ function Appointment() {
       <Form onSubmit={onSubmit} />
       <h2>Appointment List</h2>
       <List items={appointments}/>
+      {appointments.length > 0 && (
+        <button onClick={resetList} style={{ width: 'fit-content'}}>
+          Reset list
+        </button>
+      )}
     </div>
   );
 }
