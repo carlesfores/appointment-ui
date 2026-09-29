@@ -13,7 +13,7 @@ function AppointmentList({ list, onReset }) {
   return (
     <div className="appointment-list">
       {list.map((item, index) => <div key={index}>{`${[item.date]}: ${item.name}`}</div>)}
-      <button onClick={onReset} style={{ width: 'fit-content'}}>
+      <button className="button is-link" onClick={onReset} style={{ width: 'fit-content'}}>
         Reset list
       </button>
     </div>

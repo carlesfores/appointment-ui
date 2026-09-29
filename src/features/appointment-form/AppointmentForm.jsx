@@ -31,7 +31,7 @@ function AppointmentForm({onSubmit}) {
           <label className="appointment-form__label" htmlFor="hour"> Hour </label>
           <select
             id="hour"
-            className="input appointment-form__input"
+            className="select input appointment-form__input"
             { ...register("hour", { 
               required: "Required field." 
             })}
@@ -49,6 +49,7 @@ function AppointmentForm({onSubmit}) {
           <label className="appointment-form__label" htmlFor="name"> Name </label>
           <input
             id="name"
+            placeholder="Enter name"
             className="input appointment-form__input"
             { ...register("name", { 
               required: "Required field.", 
@@ -59,7 +60,7 @@ function AppointmentForm({onSubmit}) {
         </div>
 
         <div className="appointment-form__group appointment-form__submit">
-          <input type="submit" className="input"/>
+          <input type="submit" className="button is-link"/>
         </div>
 
     </form>
