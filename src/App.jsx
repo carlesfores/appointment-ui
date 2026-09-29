@@ -25,11 +25,12 @@ function App() {
       <div className="page-content">
         <Header />
         <main className="page-main">
-          <h2>Appointment Form</h2>
+          <h2>Lets go</h2>
+          <h3>Appointment Form</h3>
           <section className="page-section">
             <AppointmentForm onSubmit={onSubmit} />
           </section>
-          <h2>Appointment List</h2>
+          <h3>Appointment List</h3>
           <section className="page-section">
             <AppointmentList list={appointments} onReset={onReset} />
           </section>

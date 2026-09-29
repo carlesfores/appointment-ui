@@ -19,7 +19,7 @@ function AppointmentForm({onSubmit}) {
           <input
             id="date"
             type="date"
-            className="appointment-form__input"
+            className="input appointment-form__input"
             { ...register("date", { 
               required: "Required field."
             })}
@@ -31,7 +31,7 @@ function AppointmentForm({onSubmit}) {
           <label className="appointment-form__label" htmlFor="hour"> Hour </label>
           <select
             id="hour"
-            className="appointment-form__input"
+            className="input appointment-form__input"
             { ...register("hour", { 
               required: "Required field." 
             })}
@@ -49,7 +49,7 @@ function AppointmentForm({onSubmit}) {
           <label className="appointment-form__label" htmlFor="name"> Name </label>
           <input
             id="name"
-            className="appointment-form__input"
+            className="input appointment-form__input"
             { ...register("name", { 
               required: "Required field.", 
               maxLength: 255
@@ -59,7 +59,7 @@ function AppointmentForm({onSubmit}) {
         </div>
 
         <div className="appointment-form__group appointment-form__submit">
-          <input type="submit" />
+          <input type="submit" className="input"/>
         </div>
 
     </form>
