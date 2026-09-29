@@ -1,0 +1,7 @@
+export const APPOINTMENT_HOURS = {
+  "APPOINTMENT_1": "10:00",
+  "APPOINTMENT_2": "12:00",
+  "APPOINTMENT_3": "14:00",
+  "APPOINTMENT_4": "16:00",
+  "APPOINTMENT_5": "18:00",
+}
