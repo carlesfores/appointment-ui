@@ -1,19 +1,15 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { APPOINTMENT_HOURS } from "@/enums";
 import './Form.scss';
 
-function Form() {
-
-  const [hours] = useState(Object.values(APPOINTMENT_HOURS))
-
+function Form({handleAction}) {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => handleAction(data);
 
   return (
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
@@ -40,7 +36,7 @@ function Form() {
             required: "Required field." 
           })}
         >
-          {hours.map((hour, idx) => (
+          {(Object.values(APPOINTMENT_HOURS) || []).map((hour, idx) => (
             <option key={idx} value={hour}>
               {hour}
             </option>
