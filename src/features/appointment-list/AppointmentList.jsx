@@ -2,6 +2,10 @@ import "./AppointmentList.scss";
 
 function AppointmentList({ list, onReset }) {
 
+  if (!Array.isArray(list)) {
+    return (<p> Something went wrong.</p>)
+  }
+
   if (Array.isArray(list) && list.length === 0) {
     return (<p> Empty list.</p>)
   }
