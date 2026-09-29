@@ -9,7 +9,9 @@ function App() {
       <div className="page-content">
         <Header />
         <main className="page-main">
-          <Appointment />
+          <section className="page-section">
+            <Appointment />
+          </section>
         </main>
       </div>
     </>

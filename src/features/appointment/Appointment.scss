@@ -1,3 +1,61 @@
 .appointment {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+
+  &__group {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
   
+  &__label {
+    margin-bottom: 8px;
+  }
+  
+  &__input {
+    margin-bottom: 6px;
+  }
+
+  &__error {
+    color: red;
+    font-size: 0.8rem;
+  }
+
+  input {
+    padding: 5px 6px;
+  }
+
+  select {
+    padding: 9px 6px;
+  }
+
+  input[type='date'], 
+  input[type='text'], 
+  input[type='number'] {
+    width: 220px;
+  }
+
+  select {
+    width: 220px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    align-items: normal;
+  }
 }
