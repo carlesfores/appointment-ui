@@ -8,7 +8,7 @@ function Appointment() {
 
   const [appointments, setAppointments] = useState([]);
 
-  const handleAction = (data) => {
+  const onSubmit = (data) => {
     setAppointments([
       ...appointments,
       data
@@ -18,7 +18,7 @@ function Appointment() {
   return (
     <div className="appointment">
       <h2>Appointment Form</h2>
-      <Form handleAction={handleAction} />
+      <Form onSubmit={onSubmit} />
       <h2>Appointment List</h2>
       <List items={appointments}/>
     </div>

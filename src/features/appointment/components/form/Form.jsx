@@ -2,14 +2,12 @@ import { useForm } from "react-hook-form";
 import { APPOINTMENT_HOURS } from "@/enums";
 import './Form.scss';
 
-function Form({handleAction}) {
+function Form({onSubmit}) {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-
-  const onSubmit = (data) => handleAction(data);
 
   return (
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
