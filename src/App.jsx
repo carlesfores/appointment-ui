@@ -22,20 +22,19 @@ function App() {
 
   return (
     <>
-      <div className="page-content">
-        <Header />
-        <main className="page-main">
-          <h1 className="title is-1">Lets go</h1>
-          <h2 className="title is-2">Appointment Form</h2>
-          <section className="page-section">
-            <AppointmentForm onSubmit={onSubmit} />
-          </section>
-          <h2 className="title is-2">Appointment List</h2>
-          <section className="page-section">
-            <AppointmentList list={appointments} onReset={onReset} />
-          </section>
-        </main>
-      </div>
+      <Header />
+      <main className="container is-fullhd">
+        <section className="section">
+          <div className="title">Start appointment</div>
+          <div className="subtitle">Start appointment</div>
+          <AppointmentForm onSubmit={onSubmit} />
+        </section>
+        <section className="section">
+          <div className="title">Appointments</div>
+          <div className="subtitle">Appointment List</div>
+          <AppointmentList list={appointments} onReset={onReset} />
+        </section>
+      </main>
     </>
   )
 }
