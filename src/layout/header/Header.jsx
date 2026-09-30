@@ -2,11 +2,21 @@ import "@/layout/header/Header.scss";
 
 function Header() {
   return (
-    <header className="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div className="navbar is-primary">
       <div className="navbar-brand">
-        <div className="navbar-item"> appointment-ui </div>
+        <div 
+          className="
+            navbar-item 
+            is-size-4 
+            is-family-secondary 
+            has-text-white 
+            has-text-weight-bold
+          "
+        >
+          Brand Logo
+        </div>
       </div>
-    </header>
+    </div>  
   )
 };
 

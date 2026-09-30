@@ -71,7 +71,7 @@ function AppointmentForm({ onSubmit }) {
         </div>
 
         <div className="field">
-          <input type="submit" className="button is-primary"/>
+          <input type="submit" value="Book" className="button is-primary" /> 
         </div>
     </form>
   );

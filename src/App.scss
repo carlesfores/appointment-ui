@@ -1,1 +1,7 @@
-
+.page-container {
+  height: calc(100% - 52px); // TODO review bulma css vars, bulma navbar height = 52px  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
