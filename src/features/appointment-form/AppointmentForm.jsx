@@ -3,7 +3,7 @@ import { APPOINTMENT_HOURS } from "@/enums";
 
 import "./AppointmentForm.scss";
 
-function AppointmentForm({onSubmit}) {
+function AppointmentForm({ onSubmit }) {
 
   const {
     register,
@@ -13,56 +13,66 @@ function AppointmentForm({onSubmit}) {
 
   return (
     <form className="appointment-form" onSubmit={handleSubmit(onSubmit)}>
-
-        <div className="appointment-form__group">
-          <label className="appointment-form__label" htmlFor="date"> Date </label>
+        <div className="field">
+          <label className="label" htmlFor="date"> Date </label>
           <input
             id="date"
             type="date"
-            className="input appointment-form__input"
+            className="input"
             { ...register("date", { 
               required: "Required field."
             })}
           />
-          { errors.date && <div className="appointment-form__error">{errors.date?.message}</div>}
+          { errors.date && (
+            <div className="help is-danger">{errors.date?.message}</div>
+          )}
         </div>
 
-        <div className="appointment-form__group">
-          <label className="appointment-form__label" htmlFor="hour"> Hour </label>
-          <select
-            id="hour"
-            className="select input appointment-form__input"
-            { ...register("hour", { 
-              required: "Required field." 
-            })}
-          >
-            {(Object.values(APPOINTMENT_HOURS) || []).map((hour, idx) => (
-              <option key={idx} value={hour}>
-                {hour}
-              </option>
-            ))}
-          </select>
-          { errors.hour && <div className="appointment-form__error">{errors.hour?.message}</div>}
+        <div className="field">
+          <label className="label" htmlFor="hour"> Hour </label>
+          <div className="control">
+            <div className="select">
+              <select
+                id="hour"
+                className="select"
+                { ...register("hour", { 
+                  required: "Required field." 
+                })}
+              >
+                {(Object.values(APPOINTMENT_HOURS) || []).map((hour, idx) => (
+                  <option key={idx} value={hour}>
+                    {hour}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+          </div>
+      
+          { errors.hour && (
+            <div className="help is-danger">{errors.hour?.message}</div>
+          )}
         </div>
 
-        <div className="appointment-form__group">
-          <label className="appointment-form__label" htmlFor="name"> Name </label>
+        <div className="field">
+          <label className="label" htmlFor="name"> Name </label>
           <input
             id="name"
             placeholder="Enter name"
-            className="input appointment-form__input"
+            className="input"
             { ...register("name", { 
               required: "Required field.", 
               maxLength: 255
             })}
           />
-          { errors.name && <div className="appointment-form__error">Required field</div>}
+          { errors.name && (
+            <div className="help is-danger">{errors.name?.message}</div>
+          )}
         </div>
 
-        <div className="appointment-form__group appointment-form__submit">
+        <div className="field">
           <input type="submit" className="button is-link"/>
         </div>
-
     </form>
   );
 }
