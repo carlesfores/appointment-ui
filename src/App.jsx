@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "@/layout/header/index";
 import AppointmentForm from "@/features/appointment-form/index";
 import AppointmentList from "@/features/appointment-list/index";
+import api from "@/api";
 
 import '@/App.scss';
 
@@ -15,10 +16,23 @@ function App() {
       data
     ]);
   };
+  
+  useEffect(() => {
+    
+    const getAppointments = async () => {
+      try {
+        const response = await api.get("/appointments");
+        const results = response.data?.data;
+        console.log(results)
+        setAppointments(results);
+      } catch(error) {
+        console.error("Error fetching appointments:", error);
+      }
+    }
 
-  const onReset = () => {
-    setAppointments([]);
-  };
+    getAppointments();
+
+  }, []);
 
   return (
     <>
@@ -26,13 +40,11 @@ function App() {
       <main className="container is-fullhd">
         <section className="section">
           <div className="title">Start appointment</div>
-          <div className="subtitle">Start appointment</div>
           <AppointmentForm onSubmit={onSubmit} />
         </section>
         <section className="section">
           <div className="title">Appointments</div>
-          <div className="subtitle">Appointment List</div>
-          <AppointmentList list={appointments} onReset={onReset} />
+          <AppointmentList list={appointments} />
         </section>
       </main>
     </>

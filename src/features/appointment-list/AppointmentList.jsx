@@ -1,6 +1,6 @@
 import "./AppointmentList.scss";
 
-function AppointmentList({ list, onReset }) {
+function AppointmentList({ list }) {
 
   if (!Array.isArray(list)) {
     return (<p> Something went wrong.</p>)
@@ -13,9 +13,6 @@ function AppointmentList({ list, onReset }) {
   return (
     <div className="appointment-list">
       {list.map((item, index) => <div key={index}>{`${[item.date]}: ${item.name}`}</div>)}
-      <button className="button is-link" onClick={onReset} style={{ width: 'fit-content'}}>
-        Reset list
-      </button>
     </div>
   );
 }

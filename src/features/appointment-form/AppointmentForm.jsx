@@ -12,7 +12,7 @@ function AppointmentForm({ onSubmit }) {
   } = useForm();
 
   return (
-    <form className="appointment-form" onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)}>
         <div className="field">
           <label className="label" htmlFor="date"> Date </label>
           <input
