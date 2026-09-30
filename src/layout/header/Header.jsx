@@ -1,14 +1,13 @@
 import "@/layout/header/Header.scss";
 
-function TopHeader() {
-
+function Header() {
   return (
-    <header className="top-header">
-      <div className="top-header__content">
-        <div className="title"> appointment-ui </div>
+    <header className="navbar" role="navigation" aria-label="main navigation">
+      <div className="navbar-brand">
+        <div className="navbar-item"> appointment-ui </div>
       </div>
     </header>
   )
-}
+};
 
-export default TopHeader;
+export default Header;
